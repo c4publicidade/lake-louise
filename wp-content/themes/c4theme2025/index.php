@@ -393,7 +393,7 @@
                 <img src="<?php bloginfo('template_url'); ?>/img/iris/banner1.webp" alt="imagem da casa iris">
             </div>
 
-            <!-- Slider, que só aparece quando ampliar -->
+           
             <div class="box-carousel_iris owl-carousel">
                 <div class="box-img_2 item">
                     <img src="<?php bloginfo('template_url'); ?>/img/iris/banner1.webp" alt="imagem da casa iris">
@@ -495,6 +495,45 @@
 
     </div>
 </section>
+<section id="obras">
+    <div class="container" >
+        <h2  data-aos="zoom-in" data-aos-duration="1500">Evolução de obras</h2>
+        <div class="evolucoes">
+            <?php
+            $args = array(
+                'post_type' => 'obras',
+                'posts_per_page' => -1,
+                'orderby' => 'date',
+                'order' => 'ASC',
+            );
+            $query = new WP_Query($args);
+            if ($query->have_posts()) :
+                while ($query->have_posts()) : $query->the_post();
+                    $porcentagem = get_post_meta(get_the_ID(), 'obra_porcentagem', true);
+            ?>
+                    <div class="obras" data-aos="zoom-in" data-aos-duration="1700">
+                        <div class="single">
+                            <div class="obras-title">
+                                <span><?php the_title(); ?></span>
+                                <span><?php echo esc_html($porcentagem); ?>%</span>
+                            </div>
+                            <div class="bar-container">
+                                <div class="bar">
+                                    <div class="porcentagem" style="width: <?php echo esc_attr($porcentagem); ?>%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            <?php
+                endwhile;
+                wp_reset_postdata();
+            endif;
+            ?>
+        </div>
+    </div>
+</section>
+
+
 <section class="contato relative">
     <div class="box-img absolute esq-bottom">
         <img class="" src="<?php bloginfo('template_url'); ?>/img/contato/plantaFundo2.webp" alt="ícone de planta decorativa" data-aos="zoom-in" data-aos-duration="1800">

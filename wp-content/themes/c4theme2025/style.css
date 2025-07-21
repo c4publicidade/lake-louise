@@ -233,6 +233,74 @@ width: 85%;}
   .map{min-height:1000px;}
   .map .box-quadro .box-txt, .map .box-quadro .maps{width:100%;}
 }
+
+/* obras */
+#obras  {
+  background: url("./img/obras/background-obras.png") no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 150px 20px !important;
+}
+
+
+#obras .container {
+  width: 100%;
+}
+
+
+#obras .container h2 {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #fff !important;
+  text-align: center;
+  font-size: 24px;
+}
+
+#obras .evolucoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 39px;
+    gap: 40px;  
+}
+
+@media (max-width: 680px){
+ #obras .evolucoes {
+      grid-template-columns: 1fr
+  } 
+}
+
+#obras .obras-title {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 580px) {
+  #obras .obras-title {
+    font-size: 14px;
+  }
+}
+
+#obras .bar-container {
+    height: 28px;
+    border-radius: 70px;
+    background: #fff;  
+}
+
+#obras .bar {
+  border-radius: 70px;  
+}
+
+#obras .porcentagem {
+      background: #365A63;
+    width: 81%;
+    height: 28px;
+    border-radius: 70px;
+}
+
+
 /*contato*/
 .contato .desk{display: flex;}
 .contato .mobile{display: none;}
