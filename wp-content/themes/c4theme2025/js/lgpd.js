@@ -1,0 +1,4 @@
+////////////////////// LGPD  //////////////////////
+// Scripts coringas que podem ser acrescentados para todos os clientes
+
+////////////////////// FIM

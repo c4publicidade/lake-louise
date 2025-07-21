@@ -1,0 +1,44 @@
+# Ignorar o core do WordPress (se você não versiona ele)
+wp-admin/
+wp-includes/
+license.txt
+readme.html
+
+# Ignorar configurações locais e sensíveis
+wp-config.php
+.htaccess
+web.config
+
+
+# Ignorar todos os temas, exceto os usados
+wp-content/themes/*
+!wp-content/themes/c4theme2025
+
+# Ignorar uploads e arquivos dinâmicos
+##wp-content/uploads/
+wp-content/cache/
+wp-content/backups/
+
+# Ignorar arquivos temporários e de sistema
+*.log
+*.sql
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db
+
+# Ignorar configurações de editores
+*.sublime-project
+*.sublime-workspace
+.vscode/
+
+# Ignorar pacotes de dependência (caso use)
+node_modules/
+.env
+.env.local
+
+# Ignorar arquivos de build (se usar)
+dist/
+build/
+error_log
+

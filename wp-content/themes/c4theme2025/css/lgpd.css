@@ -1,0 +1,37 @@
+/*! ////////////////////// LGPD - PARTE #2/3 ////////////////////// !*/
+@keyframes blinklgpd {
+    0%, 100% {
+        background-color: #4a9c3d;
+    }
+    50% {
+        background-color: #2a6520;
+    }
+}
+.lgpd {position: fixed;bottom: 0;width: 100%;z-index: 9999999999999;display: none;padding: 0px 10px;}
+.lgpd .container:before, .lgpd .container:after {}
+.lgpd .container {max-width: 1200px;position: initial !important}
+.lgpd .content {border-radius: 0px;padding: 17px 20px;max-width: 100%;width: 100%;margin: 9px auto;animation: blinklgpd 2s infinite linear;box-shadow: unset;position: relative;pointer-events: all}
+.lgpd .content p {color: #fff !important;font-size: 16px !important;pointer-events: none;margin: 0px;}
+.lgpd .content p a {font-weight: bold;color: #fff;font-size: 16px;text-decoration: underline;pointer-events: all;}
+.lgpd .content p a#fecha {font-weight: bold;color: #fff;font-size: 0px;position: absolute;right: 11px;text-decoration: none;background-color: #25551d;padding: 5px 10px;text-align: center;padding: 5px 10px;text-align: center;border-radius: 5px;top: 50%;transform: translateY(-50%);}
+.lgpd .content p a#fecha:before {content: 'Concordar e fechar';font-size: 15px;text-transform: uppercase;}
+input.aceitar {width: auto !important;margin-right: 8px;position: initial;opacity: 1;}
+.termos label a {font-weight: bold;}
+.termos label {margin: 10px 0px;display: block;}
+.termos .wpcf7-list-item {margin-left: 0px}
+
+html body div.politica-privacidade {}
+html body div.politica-privacidade ul {padding: 0px;margin: 0px 0px 20px 0px;}
+html body div.politica-privacidade ul li {list-style: none;}
+html body div.politica-privacidade ul li a {display: block;padding: 10px 15px;background-color: #ededed;margin: 2px 0px;color: #000;font-style: italic;}
+html body div.politica-privacidade p#main b {text-decoration: underline;font-size: 18px;}
+
+@media (max-width: 1220px) and (min-width: 992px) {
+.lgpd .content p {text-align: left;max-width: 760px;}
+}
+
+@media screen and (max-width: 991px) {
+.lgpd .content p a#fecha {position: inherit;display: block;transform: unset;margin-top: 10px;border-radius: 5px}
+.lgpd .content p {max-width: 100% !important}
+}
+/*! ////////////////////// FIM PARTE #2 ////////////////////// !*/
